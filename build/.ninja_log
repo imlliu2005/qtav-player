@@ -1,0 +1,23 @@
+# ninja log v5
+2	122	0	CMakeFiles/qtav_player_autogen	65cdb21c54e8f6a
+2	122	0	qtav_player_autogen/mocs_compilation.cpp	65cdb21c54e8f6a
+125	1119	7283075970949062	CMakeFiles/qtav_player.dir/qtav_player_autogen/mocs_compilation.cpp.obj	355977dc93a3c61e
+2	122	0	D:/test/qtav-player/build/CMakeFiles/qtav_player_autogen	65cdb21c54e8f6a
+2	122	0	D:/test/qtav-player/build/qtav_player_autogen/mocs_compilation.cpp	65cdb21c54e8f6a
+123	1125	7283075970949062	CMakeFiles/qtav_player.dir/src/qtav_player.cpp.obj	acf7093072b1770d
+127	1124	7283075970949062	CMakeFiles/qtav_player.dir/src/main.cpp.obj	ad07c43188b0cebc
+1125	1245	7283075971944462	qtav_player.exe	56f6e4b29ea1aa67
+1	222	7283078689313712	build.ninja	210fea0c1af5fd
+3	170	0	CMakeFiles/qtav_player_autogen	65cdb21c54e8f6a
+3	170	0	qtav_player_autogen/mocs_compilation.cpp	65cdb21c54e8f6a
+3	170	0	D:/test/qtav-player/build/CMakeFiles/qtav_player_autogen	65cdb21c54e8f6a
+3	170	0	D:/test/qtav-player/build/qtav_player_autogen/mocs_compilation.cpp	65cdb21c54e8f6a
+170	1356	7283078718655544	CMakeFiles/qtav_player.dir/qtav_player_autogen/mocs_compilation.cpp.obj	355977dc93a3c61e
+174	1363	7283078718820079	CMakeFiles/qtav_player.dir/src/playerwindow.cpp.obj	f8e2cc9af605119a
+1363	1498	7283078719822494	qtav_player.exe	41b1d81ac838872d
+3	47	0	CMakeFiles/qtav_player_autogen	65cdb21c54e8f6a
+3	47	0	qtav_player_autogen/mocs_compilation.cpp	65cdb21c54e8f6a
+3	47	0	D:/test/qtav-player/build/CMakeFiles/qtav_player_autogen	65cdb21c54e8f6a
+3	47	0	D:/test/qtav-player/build/qtav_player_autogen/mocs_compilation.cpp	65cdb21c54e8f6a
+48	1202	7283080347402605	CMakeFiles/qtav_player.dir/src/main.cpp.obj	ad07c43188b0cebc
+1203	1339	7283080348502896	qtav_player.exe	41b1d81ac838872d
