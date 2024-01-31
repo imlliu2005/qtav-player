@@ -47,7 +47,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SD:\test\qtav-player -BD:\test\qtav-player\build
+  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SD:\work\qtav-player -BD:\work\qtav-player\build
   description = Re-running CMake...
   generator = 1
 

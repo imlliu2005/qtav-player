@@ -1,4 +1,4 @@
-D:/test/qtav-player/build/CMakeFiles/qtav_player.dir
-D:/test/qtav-player/build/CMakeFiles/edit_cache.dir
-D:/test/qtav-player/build/CMakeFiles/rebuild_cache.dir
-D:/test/qtav-player/build/CMakeFiles/qtav_player_autogen.dir
+D:/work/qtav-player/build/CMakeFiles/qtav_player.dir
+D:/work/qtav-player/build/CMakeFiles/edit_cache.dir
+D:/work/qtav-player/build/CMakeFiles/rebuild_cache.dir
+D:/work/qtav-player/build/CMakeFiles/qtav_player_autogen.dir

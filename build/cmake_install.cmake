@@ -1,4 +1,4 @@
-# Install script for directory: D:/test/qtav-player
+# Install script for directory: D:/work/qtav-player
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/test/qtav-player/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/work/qtav-player/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

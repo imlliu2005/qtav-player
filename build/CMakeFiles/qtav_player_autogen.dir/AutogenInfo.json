@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "D:/test/qtav-player/build/qtav_player_autogen",
-	"CMAKE_BINARY_DIR" : "D:/test/qtav-player/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "D:/test/qtav-player/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "D:/test/qtav-player",
+	"BUILD_DIR" : "D:/work/qtav-player/build/qtav_player_autogen",
+	"CMAKE_BINARY_DIR" : "D:/work/qtav-player/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/work/qtav-player/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/work/qtav-player",
 	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"D:/test/qtav-player/CMakeLists.txt",
-		"D:/test/qtav-player/build/CMakeFiles/3.28.1/CMakeSystem.cmake",
+		"D:/work/qtav-player/CMakeLists.txt",
+		"D:/work/qtav-player/build/CMakeFiles/3.28.1/CMakeSystem.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake",
-		"D:/test/qtav-player/build/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
+		"D:/work/qtav-player/build/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
@@ -23,7 +23,7 @@
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC-CXX.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC.cmake",
-		"D:/test/qtav-player/build/CMakeFiles/3.28.1/CMakeRCCompiler.cmake",
+		"D:/work/qtav-player/build/CMakeFiles/3.28.1/CMakeRCCompiler.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeRCInformation.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake",
 		"C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
@@ -63,27 +63,33 @@
 		"C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeParseArguments.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "D:/test/qtav-player",
+	"CMAKE_SOURCE_DIR" : "D:/work/qtav-player",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"D:/test/qtav-player/src/playerwindow.h",
+			"D:/work/qtav-player/src/av_player.h",
 			"MU",
-			"UVLADIE3JM/moc_playerwindow.cpp",
+			"UVLADIE3JM/moc_av_player.cpp",
 			null
 		],
 		[
-			"D:/test/qtav-player/src/qtav_player.h",
+			"D:/work/qtav-player/src/player_window.h",
+			"MU",
+			"UVLADIE3JM/moc_player_window.cpp",
+			null
+		],
+		[
+			"D:/work/qtav-player/src/qtav_player.h",
 			"MU",
 			"UVLADIE3JM/moc_qtav_player.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "D:/test/qtav-player/build/qtav_player_autogen/include",
-	"MOC_COMPILATION_FILE" : "D:/test/qtav-player/build/qtav_player_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "D:/work/qtav-player/build/qtav_player_autogen/include",
+	"MOC_COMPILATION_FILE" : "D:/work/qtav-player/build/qtav_player_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB", "WIN32" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -94,9 +100,9 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"D:/test/qtav-player/build",
-		"D:/test/qtav-player",
-		"D:/test/qtav-player/QtAV/include",
+		"D:/work/qtav-player/build",
+		"D:/work/qtav-player",
+		"D:/work/qtav-player/QtAV/include",
 		"C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include",
 		"C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtWidgets",
 		"C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui",
@@ -113,17 +119,18 @@
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 10,
-	"PARSE_CACHE_FILE" : "D:/test/qtav-player/build/CMakeFiles/qtav_player_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "D:/work/qtav-player/build/CMakeFiles/qtav_player_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 14,
-	"SETTINGS_FILE" : "D:/test/qtav-player/build/CMakeFiles/qtav_player_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "D:/work/qtav-player/build/CMakeFiles/qtav_player_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "D:/test/qtav-player/src/main.cpp", "MU", null ],
-		[ "D:/test/qtav-player/src/playerwindow.cpp", "MU", null ],
-		[ "D:/test/qtav-player/src/qtav_player.cpp", "MU", null ]
+		[ "D:/work/qtav-player/src/av_player.cpp", "MU", null ],
+		[ "D:/work/qtav-player/src/main.cpp", "MU", null ],
+		[ "D:/work/qtav-player/src/player_window.cpp", "MU", null ],
+		[ "D:/work/qtav-player/src/qtav_player.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
