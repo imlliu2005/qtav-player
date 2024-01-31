@@ -10,6 +10,7 @@ av_player::av_player(QWidget *parent) : QWidget(parent)
         return;
     }
     av_player_->setRenderer(video_output_.get());
+    out_widget_ = video_output_->widget();
 }
 
 av_player::~av_player()
@@ -63,4 +64,9 @@ void av_player::seek(int value)
 void av_player::seek()
 {
     // seek(mpTimeSlider->value());
+}
+
+void av_player::stop()
+{
+    av_player_->stop();
 }

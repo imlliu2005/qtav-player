@@ -22,7 +22,10 @@ public:
     double forced_frame_rate();                         // 当前帧数    
     void seek(int value);                               // 拖拽进度条
     void seek();                                        // 点击进度条
+    void stop();                                        // 结束播放
 
+public:
+    QWidget* out_widget_;
 
 private:
     std::shared_ptr<QtAV::VideoOutput> video_output_;   // 视频渲染
