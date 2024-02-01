@@ -23,9 +23,11 @@ public:
     void seek(int value);                               // 拖拽进度条
     void seek();                                        // 点击进度条
     void stop();                                        // 结束播放
+    void capture();                                     // 截屏
 
 public:
     QWidget* out_widget_;
+    QtAV::VideoCapture* video_capture_;
 
 private:
     std::shared_ptr<QtAV::VideoOutput> video_output_;   // 视频渲染

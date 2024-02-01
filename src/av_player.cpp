@@ -11,6 +11,7 @@ av_player::av_player(QWidget *parent) : QWidget(parent)
     }
     av_player_->setRenderer(video_output_.get());
     out_widget_ = video_output_->widget();
+    video_capture_ = av_player_->videoCapture();
 }
 
 av_player::~av_player()
@@ -69,4 +70,9 @@ void av_player::seek()
 void av_player::stop()
 {
     av_player_->stop();
+}
+
+void av_player::capture()
+{
+
 }

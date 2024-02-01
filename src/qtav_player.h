@@ -1,8 +1,10 @@
 #pragma once
 #include <QMainWindow>
-#include "av_player.h"
 #include <QPushButton>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <thread>
+#include "av_player.h"
 
 class qtav_player : public QMainWindow {
     Q_OBJECT
@@ -13,12 +15,21 @@ public:
 
 private:
     void run();
+    void create_layout();
+    void init_connect();
 
 private: 
-    av_player* my_player_;
+    av_player* player_;
+    std::thread* pthread_;
+
     QPushButton* play_btn_;
     QPushButton* play_pause_btn_;
     QPushButton* stop_btn_;
+    QPushButton* forward_btn_;
+    QPushButton* backward_btn_;
+    QPushButton* capture_btn_;
 
-    std::thread* pthread_;
+    QVBoxLayout *vb_layout_;
+    QHBoxLayout *hb_layout_;
+    
 };
