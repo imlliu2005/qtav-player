@@ -41,17 +41,22 @@ private:
     void init_av_player_signals();
 
 private:
-    
     QWidget* video_widget_;                             // 视频播放窗口
     QtAV::VideoCapture* video_capture_;                 // 截图实例
-    std::shared_ptr<QtAV::AVPlayer> player_;         // 播放器接口实例
+    std::shared_ptr<QtAV::AVPlayer> player_;            // 播放器接口实例
     std::shared_ptr<QtAV::VideoOutput> video_output_;   // 视频渲染
 
 signals:
-    void update_slider_signal(int64_t pos);
-    void slider_start_signal();
-    void update_slider_unit_signal();
-
+    void start_signal();
+    void notify_interval_changed_signal();
+    void seek_finished_signal(int64_t value);
+    void media_status_changed_signal(QtAV::MediaStatus);
+    void buffer_progress_changed_signal(double value);
+    void error_signal(QtAV::AVError);
+    void stop_signal();
+    void paused_signal(bool value);
+    void speed_changed_signal(int64_t value);
+    void position_changed_signal(int64_t value);
 };
 
 #endif // AV_PLAYER_H

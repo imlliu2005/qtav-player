@@ -57,11 +57,16 @@ void qtav_player::create_layout()
     hb_layout_->addWidget(speed05_btn_);
 }
 
+void qtav_player::update_slider(int64_t value)
+{
+    slider_->setRange(0, int(av_player_->duration()/unit_step_));
+    slider_->setValue(int(value/unit_step_));
+}
+
 void qtav_player::init_connect()
 {
     connect(play_btn_, &QPushButton::clicked, [=](){
         pthread_ = new std::thread(std::bind(&qtav_player::run, this));
-        // run();
     });
 
     connect(stop_btn_, &QPushButton::clicked, [=](){
@@ -96,31 +101,51 @@ void qtav_player::init_connect()
     // 进度条
     connect(slider_, &QSlider::sliderMoved, [=](int position){
         av_player_->seek(position);
-        // QMessageBox::warning(0, QString::fromLatin1("sliderMoved"), tr("sliderMoved"));
     });
     
     connect(slider_, &QSlider::sliderPressed, [=](){
         av_player_->seek(slider_->value());
     });
 
-    connect(av_player_, &av_player::slider_start_signal, [=](){
-        update_slider(av_player_->position());
 
+    // qtav 信号处理
+    connect(av_player_, &av_player::start_signal, [=](){
+        update_slider(av_player_->position());
     });
 
-    connect(av_player_, &av_player::update_slider_signal, [=](qint64 value){
+    connect(av_player_, &av_player::position_changed_signal, [=](int64_t value){
         update_slider(value);
     });
 
-    connect(av_player_, &av_player::update_slider_unit_signal, [=](){
+    connect(av_player_, &av_player::notify_interval_changed_signal, [=](){
         unit_step_ = av_player_->notify_interval();
         update_slider(av_player_->position());
     });
+
+    connect(av_player_, &av_player::seek_finished_signal, [=](int64_t value){
+        
+    });
+
+    connect(av_player_, &av_player::media_status_changed_signal, [=](QtAV::MediaStatus value){
+        
+    });
+
+    connect(av_player_, &av_player::buffer_progress_changed_signal, [=](double value){
+        
+    });
+
+    connect(av_player_, &av_player::error_signal, [=](QtAV::AVError value){
+        
+    });
+
+    connect(av_player_, &av_player::paused_signal, [=](bool value){
+        
+    });
+
+    connect(av_player_, &av_player::speed_changed_signal, [=](int64_t value){
+        
+    });
 }
 
-void qtav_player::update_slider(int64_t value)
-{
-    slider_->setRange(0, int(av_player_->duration()/unit_step_));
-    slider_->setValue(int(value/unit_step_));
-}
+
 

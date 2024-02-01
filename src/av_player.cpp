@@ -126,7 +126,14 @@ int av_player::notify_interval()
 
 void av_player::init_av_player_signals()
 {
-    connect(player_.get(), &QtAV::AVPlayer::positionChanged, this, &av_player::update_slider_signal);
-    connect(player_.get(), &QtAV::AVPlayer::started, this, &av_player::slider_start_signal);
-    connect(player_.get(), &QtAV::AVPlayer::notifyIntervalChanged, this, &av_player::update_slider_unit_signal);
+    connect(player_.get(), &QtAV::AVPlayer::positionChanged, this, &av_player::position_changed_signal);
+    connect(player_.get(), &QtAV::AVPlayer::started, this, &av_player::start_signal);
+    connect(player_.get(), &QtAV::AVPlayer::notifyIntervalChanged, this, &av_player::notify_interval_changed_signal);
+    connect(player_.get(), &QtAV::AVPlayer::seekFinished, this, &av_player::seek_finished_signal);
+    connect(player_.get(), &QtAV::AVPlayer::mediaStatusChanged, this, &av_player::media_status_changed_signal);
+    connect(player_.get(), &QtAV::AVPlayer::bufferProgressChanged, this, &av_player::buffer_progress_changed_signal);
+    connect(player_.get(), &QtAV::AVPlayer::error, this, &av_player::error_signal);
+    connect(player_.get(), &QtAV::AVPlayer::stopped, this, &av_player::stop_signal);
+    connect(player_.get(), &QtAV::AVPlayer::paused, this, &av_player::paused_signal);
+    connect(player_.get(), &QtAV::AVPlayer::speedChanged, this, &av_player::speed_changed_signal);
 }
