@@ -3,76 +3,130 @@
 
 av_player::av_player(QWidget *parent) : QWidget(parent)
 {
-    av_player_ = std::make_shared<QtAV::AVPlayer>(this);
+    player_ = std::make_shared<QtAV::AVPlayer>(this);
     video_output_ = std::make_shared<QtAV::VideoOutput>(this);
     if (!video_output_->widget()) {
         QMessageBox::warning(0, QString::fromLatin1("QtAV error"), tr("Can not create video renderer"));
         return;
     }
-    av_player_->setRenderer(video_output_.get());
-    out_widget_ = video_output_->widget();
-    video_capture_ = av_player_->videoCapture();
+    player_->setRenderer(video_output_.get());
+    video_widget_ = video_output_->widget();
+    video_capture_ = player_->videoCapture();
+    init_av_player_signals();
 }
 
 av_player::~av_player()
 {
+    if(video_capture_) 
+    {
+        delete video_capture_;
+        video_capture_ = nullptr;
+    }
+
+     if(video_widget_) 
+    {
+        delete video_widget_;
+        video_widget_ = nullptr;
+    }
+}
+
+QWidget* av_player::video_widget()
+{
+    return video_widget_;
 }
 
 void av_player::play(QString media_name)
 {
-    av_player_->play(media_name);
+    player_->play(media_name);
 }
 
 void av_player::seek_forward(int64_t step_ms)
 {
-    av_player_->seek(av_player_->position() + step_ms);
+    player_->seek(player_->position() + step_ms);
 }
 
 void av_player::seek_backward(int64_t step_ms)
 {
-    av_player_->seek(av_player_->position() - step_ms);
+    player_->seek(player_->position() - step_ms);
 }
 
 void av_player::play_pause()
 {
-    if (!av_player_->isPlaying()) {
-        av_player_->play();
+    if (!player_->isPlaying()) {
+        player_->play();
         return;
     }
-    av_player_->pause(!av_player_->isPaused());
-}
-
-void av_player::set_frame_rate(double fsp)
-{
-    if (!av_player_)
-    {
-        return;
-    }
-    av_player_->setFrameRate(fsp);
-}
-
-double av_player::forced_frame_rate()
-{
-    return av_player_->forcedFrameRate();
+    player_->pause(!player_->isPaused());
 }
 
 void av_player::seek(int value)
 {
-    av_player_->setSeekType(QtAV::AccurateSeek);
-    av_player_->seek((qint64)value);
-}
-
-void av_player::seek()
-{
-    // seek(mpTimeSlider->value());
+    player_->setSeekType(QtAV::AccurateSeek);
+    player_->seek((qint64)value);
 }
 
 void av_player::stop()
 {
-    av_player_->stop();
+    player_->stop();
+}
+
+void av_player::set_speed(double v)
+{
+    if (!player_)
+    {
+        return;
+    }
+    player_->setSpeed(v);
 }
 
 void av_player::capture()
 {
+    video_capture_->capture();
+}
 
+void av_player::set_original_format(bool value)
+{
+    video_capture_->setOriginalFormat(value);
+}
+
+void av_player::set_save_format(const QString& format)
+{
+    video_capture_->setSaveFormat(format);
+}
+
+void av_player::set_capture_dir(const QString& value)
+{
+    video_capture_->setCaptureDir(value);
+}
+
+void av_player::set_capture_name(const QString& value)
+{
+    video_capture_->setCaptureName(value);
+}
+
+void av_player::set_quality(int value)
+{
+    video_capture_->setQuality(value);
+}
+
+int64_t av_player::duration()
+{
+    return player_->duration();
+}
+
+int64_t av_player::position()
+{
+    return player_->position();
+}
+
+int av_player::notify_interval()
+{
+    return player_->notifyInterval();
+}
+
+void av_player::init_av_player_signals()
+{
+    connect(player_.get(), &QtAV::AVPlayer::positionChanged, this, &av_player::update_slider_signal);
+    connect(player_.get(), &QtAV::AVPlayer::started, this, &av_player::slider_start_signal);
+    connect(player_.get(), &QtAV::AVPlayer::notifyIntervalChanged, this, &av_player::update_slider_unit_signal);
 }
