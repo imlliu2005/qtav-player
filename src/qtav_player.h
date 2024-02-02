@@ -6,7 +6,7 @@
 #include <QSlider>
 #include <thread>
 #include "av_player.h"
-
+using namespace medex;
 class qtav_player : public QMainWindow {
     Q_OBJECT
 

@@ -5,8 +5,9 @@
 #include <QWidget>
 #include <memory>
 
-static const int64_t SEEKMS = 10000;                   // 单位是毫秒
+namespace medex{
 
+static const int64_t SEEKMS = 10000;                   // 单位是毫秒
 class av_player : public QWidget
 {
     Q_OBJECT
@@ -32,9 +33,11 @@ public:
     void set_quality(int value);
 
     // qtav 视频属性
-    int64_t position();
-    int64_t duration();
-    int notify_interval();
+    int64_t position();                                 // 当前位置
+    int64_t duration();                                 // 视频时长
+    int notify_interval();                              // 获取播放步长ms
+    int64_t media_start_position();                     // 媒体播放开始位置
+    int64_t media_stop_position();                      // 媒体播放停止位置
     QWidget* video_widget();
 
 private:
@@ -47,16 +50,17 @@ private:
     std::shared_ptr<QtAV::VideoOutput> video_output_;   // 视频渲染
 
 signals:
-    void start_signal();
-    void notify_interval_changed_signal();
-    void seek_finished_signal(int64_t value);
-    void media_status_changed_signal(QtAV::MediaStatus);
-    void buffer_progress_changed_signal(double value);
-    void error_signal(QtAV::AVError);
-    void stop_signal();
-    void paused_signal(bool value);
-    void speed_changed_signal(int64_t value);
-    void position_changed_signal(int64_t value);
+    void start_signal();                                // 开始播放通知
+    void notify_interval_changed_signal();              // 视频步长变化通知    
+    void seek_finished_signal(int64_t value);           // 视频定位完成通知
+    void media_status_changed_signal(QtAV::MediaStatus);// 媒体状态改变通知
+    void buffer_progress_changed_signal(double value);  // 缓存内播放进度通知
+    void error_signal(QtAV::AVError);                   // 错误通知
+    void stop_signal();                                 // 停止播放通知
+    void paused_signal(bool value);                     // 暂停播放通知   
+    void speed_changed_signal(int64_t value);           // 播放速度改变通知
+    void position_changed_signal(int64_t value);        // 播放位置改变通知
 };
+} // medex
 
 #endif // AV_PLAYER_H

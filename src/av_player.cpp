@@ -1,6 +1,8 @@
 #include "av_player.h"
 #include <QMessageBox>
 
+namespace medex {
+    
 av_player::av_player(QWidget *parent) : QWidget(parent)
 {
     player_ = std::make_shared<QtAV::AVPlayer>(this);
@@ -124,6 +126,16 @@ int av_player::notify_interval()
     return player_->notifyInterval();
 }
 
+int64_t av_player::media_start_position()
+{
+    return player_->mediaStartPosition();
+}
+
+int64_t av_player::media_stop_position()
+{
+    return player_->mediaStopPosition();
+}
+
 void av_player::init_av_player_signals()
 {
     connect(player_.get(), &QtAV::AVPlayer::positionChanged, this, &av_player::position_changed_signal);
@@ -137,3 +149,4 @@ void av_player::init_av_player_signals()
     connect(player_.get(), &QtAV::AVPlayer::paused, this, &av_player::paused_signal);
     connect(player_.get(), &QtAV::AVPlayer::speedChanged, this, &av_player::speed_changed_signal);
 }
+} // medex
