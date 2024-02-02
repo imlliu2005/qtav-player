@@ -1,7 +1,16 @@
 # ffmpeg_rtsp
 ### 生成编译文件：
 - cmake ../ -G Ninja -DCMAKE_BUILD_TYPE=Release
-- cmake ../ -G Ninja -DCMAKE_BUILD_TYPE=Debug
+
+#### 编译dll debug
+- cmake ../ -G Ninja -DCMAKE_BUILD_TYPE=Debug -DGENDLL=ON -DGENEXE=OFF
+#### 编译exe debug
+- cmake ../ -G Ninja -DCMAKE_BUILD_TYPE=Debug -DGENDLL=OFF -DGENEXE=ON
+
+#### 编译dll release
+- cmake ../ -G Ninja -DCMAKE_BUILD_TYPE=Release -DGENDLL=ON -DGENEXE=OFF
+#### 编译exe release
+- cmake ../ -G Ninja -DCMAKE_BUILD_TYPE=Release -DGENDLL=OFF -DGENEXE=ON
 
 ### 检查内存
 ```
