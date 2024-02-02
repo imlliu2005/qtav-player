@@ -8,7 +8,7 @@
 namespace medex {
 
     static const int64_t SEEKMS = 10000;                   // 单位是毫秒
-    class av_player : public QWidget
+    class __declspec(dllexport) av_player : public QWidget
     {
         Q_OBJECT
     public:

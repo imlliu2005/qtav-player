@@ -51,3 +51,7 @@
 - C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include
 - C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore
 - C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtWidgets
+
+
+### dll 使用时头文件需要注意修改为引入
+- class __declspec(dllimport) av_player : public QWidget
