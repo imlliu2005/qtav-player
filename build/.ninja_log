@@ -1,0 +1,10 @@
+# ninja log v5
+0	214	0	CMakeFiles/av_player_autogen	930b5d6848472faf
+0	214	0	av_player_autogen/mocs_compilation.cpp	930b5d6848472faf
+0	214	0	D:/work/qtav-player/build/CMakeFiles/av_player_autogen	930b5d6848472faf
+0	214	0	D:/work/qtav-player/build/av_player_autogen/mocs_compilation.cpp	930b5d6848472faf
+227	1479	7285475568899485	CMakeFiles/av_player.dir/src/main.cpp.obj	8672d94ff446f20a
+215	1489	7285475568899485	CMakeFiles/av_player.dir/av_player_autogen/mocs_compilation.cpp.obj	d16e9d01459148c9
+224	1535	7285475569367976	CMakeFiles/av_player.dir/src/av_player.cpp.obj	c13df9665837a778
+218	1602	7285475570148982	CMakeFiles/av_player.dir/src/qtav_player.cpp.obj	eacfe1ce7f84057
+1607	1723	7285475571247587	av_player.exe	6310c8b82ce1518d

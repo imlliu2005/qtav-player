@@ -1,0 +1,4 @@
+D:/work/qtav-player/build/CMakeFiles/av_player.dir
+D:/work/qtav-player/build/CMakeFiles/edit_cache.dir
+D:/work/qtav-player/build/CMakeFiles/rebuild_cache.dir
+D:/work/qtav-player/build/CMakeFiles/av_player_autogen.dir

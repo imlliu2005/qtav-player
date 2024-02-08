@@ -1,0 +1,20 @@
+# ninja log v5
+2	27	0	CMakeFiles/av_player_autogen	147d1b1817a6d4cd
+2	27	0	D:/work/qtav-player/release/av_player_autogen/mocs_compilation.cpp	147d1b1817a6d4cd
+2	27	0	av_player_autogen/mocs_compilation.cpp	147d1b1817a6d4cd
+28	1282	7285540111447662	CMakeFiles/av_player.dir/av_player_autogen/mocs_compilation.cpp.obj	e209879420864e86
+2	27	0	D:/work/qtav-player/release/CMakeFiles/av_player_autogen	147d1b1817a6d4cd
+32	1257	7285540111291393	CMakeFiles/av_player.dir/src/main.cpp.obj	e27a59ce75441102
+30	1317	7285540111932332	CMakeFiles/av_player.dir/src/av_player.cpp.obj	6b2ddf0446130101
+38	1354	7285540112228821	CMakeFiles/av_player.dir/src/qtav_player.cpp.obj	67de45025980fd3a
+3	245	7287301744963678	build.ninja	49c3f048374e3aa7
+1355	1441	7285540113116977	av_player.exe	c6071a07fb52708
+2	815	0	CMakeFiles/av_player_autogen	147d1b1817a6d4cd
+2	815	0	av_player_autogen/mocs_compilation.cpp	147d1b1817a6d4cd
+2	815	0	D:/work/qtav-player/release/CMakeFiles/av_player_autogen	147d1b1817a6d4cd
+2	815	0	D:/work/qtav-player/release/av_player_autogen/mocs_compilation.cpp	147d1b1817a6d4cd
+818	1751	7287301784996252	CMakeFiles/av_player.dir/src/slider.cpp.obj	d77a262689ed3ad7
+821	2102	7287301788490784	CMakeFiles/av_player.dir/src/main.cpp.obj	e27a59ce75441102
+824	2140	7287301788874769	CMakeFiles/av_player.dir/src/av_player.cpp.obj	6b2ddf0446130101
+815	2172	7287301789187137	CMakeFiles/av_player.dir/av_player_autogen/mocs_compilation.cpp.obj	e209879420864e86
+827	2257	7287301790042849	CMakeFiles/av_player.dir/src/qtav_player.cpp.obj	67de45025980fd3a

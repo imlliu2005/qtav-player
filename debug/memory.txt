@@ -1,0 +1,5 @@
+Detected memory leaks!
+Dumping objects ->
+D:\work\qtav-player\src\main.cpp(14) : {504} normal block at 0x0000026BDA8574E0, 1 bytes long.
+ Data: < > CD 
+Object dump complete.
