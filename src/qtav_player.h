@@ -24,7 +24,7 @@ private:
 private: 
     av_player* av_player_;
     QWidget* widget_;
-    std::thread* pthread_;
+    // std::thread* pthread_;
     int unit_step_;
     QPushButton* play_btn_;
     QPushButton* play_pause_btn_;

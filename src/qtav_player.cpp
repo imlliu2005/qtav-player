@@ -11,7 +11,7 @@ qtav_player::qtav_player(QWidget* parent)
     widget_ = nullptr;
     resize(800,600);
     unit_step_ = 1000;
-    av_player_ = new av_player("D:/work/ffmpeg_rtsp/build/second.mp4", this);
+    av_player_ = new av_player("D:/test/qtav-player/build/second.mp4", this);
     create_layout();
     init_connect();
 }
@@ -20,6 +20,7 @@ qtav_player::~qtav_player()
 {
     if (av_player_)
     {   
+        // av_player_->stop();
         delete av_player_;
         av_player_ = nullptr;
     }
@@ -75,6 +76,7 @@ void qtav_player::init_connect()
 {
     connect(play_btn_, &QPushButton::clicked, [=](){
         // pthread_ = new std::thread(std::bind(&qtav_player::run, this));
+        static std::thread t(std::bind(&qtav_player::run, this));
     });
 
     connect(stop_btn_, &QPushButton::clicked, [=](){
